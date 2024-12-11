@@ -81,7 +81,7 @@ const App = () => {
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
           <div className="bg-white rounded-lg w-96 p-6 space-y-4 shadow-lg">
             <h3 className="text-2xl font-semibold text-gray-800 text-center">
-              Enter Your Email and Payment Info
+              Enter Your Email and Make Payment
             </h3>
             <p className="text-sm text-gray-600 text-center mb-4">
               Once payment is received via Zelle, you will receive the book directly to your inbox.
