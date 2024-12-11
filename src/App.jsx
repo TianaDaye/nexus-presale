@@ -24,10 +24,6 @@ const App = () => {
   const handleFormSubmit = (e) => {
     e.preventDefault();
 
-    // Send email to backend
-    axios
-    e.preventDefault();  // Prevent default form submission behavior
-
     // Email validation
     if (!email || !/\S+@\S+\.\S+/.test(email)) {
       alert('Please enter a valid email address.');
@@ -84,7 +80,13 @@ const App = () => {
       {showModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
           <div className="bg-white rounded-lg w-96 p-6 space-y-4 shadow-lg">
-            <h3 className="text-2xl font-semibold text-gray-800">Enter Your Email</h3>
+            <h3 className="text-2xl font-semibold text-gray-800 text-center">
+              Enter Your Email and Payment Info
+            </h3>
+            <p className="text-sm text-gray-600 text-center mb-4">
+              Once payment is received via Zelle, you will receive the book directly to your inbox.
+            </p>
+            
             <form onSubmit={handleFormSubmit} className="space-y-4">
               <input
                 className="p-3 border rounded-lg w-full"
@@ -93,6 +95,11 @@ const App = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
+              <div className="bg-blue-100 text-blue-700 p-4 rounded-md text-center text-sm">
+                <p><strong>Zelle Payment Info:</strong></p>
+                <p>nexus360llc@gmail.com</p>
+                <p className="mt-2">After payment, you'll receive the book via email!</p>
+              </div>
               <button
                 className="px-6 py-3 text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition duration-300"
                 type="submit"
@@ -100,6 +107,7 @@ const App = () => {
                 Submit
               </button>
             </form>
+
             <div className="flex justify-end">
               <button
                 className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700"
