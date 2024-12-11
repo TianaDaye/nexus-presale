@@ -51,7 +51,7 @@ const App = () => {
               className={`w-72 h-auto rounded-lg border-4 border-white shadow-xl transform transition-all duration-300 ${
                 isHovered ? 'scale-110' : 'scale-100'
               }`}
-              src={isHovered ? 'Paperback Cover Rev 2.jpg' : 'bookcover.jpeg'}
+              src="bookcover.jpeg"  // Keeping the image constant
               alt="Book Cover"
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
@@ -144,4 +144,3 @@ const App = () => {
 };
 
 export default App;
-
