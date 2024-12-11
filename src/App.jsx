@@ -98,12 +98,33 @@ const App = () => {
         </div>
       )}
 
+      {/* Author Section */}
+      <div className="author-section text-center mt-12 p-6 bg-white shadow-lg rounded-lg max-w-4xl mx-auto">
+        <img
+          src="author-photo.png" 
+          alt="Author"
+          className="w-36 h-36 rounded-full mx-auto mb-4"
+        />
+        <h2 className="text-2xl font-semibold">Author Name</h2>
+        <p className="author-description text-gray-700 mx-auto mt-2 max-w-xl">
+          {showFullText
+            ? "For 15 years, Aaron James provided banking and advising services at Fortune 100 Companies including Bank of America, Merrill, and, most recently as Vice President - Private Client Advisor, at J.P. Morgan before founding Nexus 360, LLC in 2024. Having qualified for the Series 7 and 66 licenses through FINRA, he also acquired the CRPC designation (Chartered Retirement Planning Counselor). He completed his postgraduate education with an MS in Financial Management at UMGC, and graduated cum laude with a BA in Psychology from UMBC. When he's not advising his clients, he conducts speaking engagements on financial literacy, develops real estate, volunteers at his home church, and spends time with his two kids, Zoey and Zayden. At Nexus 360, LLC, he educates his client with a (W+H)ealth Mindset Activation for financial freedom and goal achievement. He enjoys traveling, working out, history, and Sudoku Puzzles."
+            : "For 15 years, Aaron James provided banking and advising services at Fortune 100 Companies including Bank of America, Merrill, and, most recently as Vice President - Private Client Advisor, at J.P. Morgan before founding Nexus 360, LLC in 2024."}
+        </p>
+        <button
+          onClick={toggleFullText}
+          className="mt-4 text-blue-500 hover:text-blue-700 focus:outline-none"
+        >
+          {showFullText ? "Read Less" : "Read More"}
+        </button>
+      </div>
+
       {/* Social Media Links */}
       <footer className="bg-gray-800 text-white w-full py-8 mt-12">
         <div className="max-w-6xl mx-auto text-center">
           <h3 className="text-xl mb-4">Let's Connect</h3>
           <div className="flex justify-center space-x-6">
-            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/nexus360llc/profilecard/?igsh=YW50Njg5czlzNXBo" target="_blank" rel="noopener noreferrer">
               <FaInstagram className="text-3xl hover:text-blue-400" />
             </a>
             <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
