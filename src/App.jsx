@@ -26,7 +26,7 @@ const App = () => {
 
     // Send email to backend
     axios
-      .post('http://localhost:5000/send-email', { email })
+      .post('/api/send-email', { email })
       .then((response) => {
         alert('Your email was sent successfully!');
         closeModal(); // Close modal after success
@@ -49,9 +49,9 @@ const App = () => {
           <div className="mt-8 flex justify-center">
             <img
               className={`w-72 h-auto rounded-lg border-4 border-white shadow-xl transform transition-all duration-300 ${
-                isHovered ? "scale-110" : "scale-100"
+                isHovered ? 'scale-110' : 'scale-100'
               }`}
-              src={isHovered ? "Paperback Cover Rev 2.jpg" : "bookcover.jpeg"}
+              src={isHovered ? 'Paperback Cover Rev 2.jpg' : 'bookcover.jpeg'}
               alt="Book Cover"
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
@@ -101,7 +101,7 @@ const App = () => {
       {/* Author Section */}
       <div className="author-section text-center mt-12 p-6 bg-white shadow-lg rounded-lg max-w-4xl mx-auto">
         <img
-          src="author-photo.png" 
+          src="author-photo.jpeg" 
           alt="Author"
           className="w-36 h-36 rounded-full mx-auto mb-4"
         />
@@ -111,12 +111,15 @@ const App = () => {
             ? "For 15 years, Aaron James provided banking and advising services at Fortune 100 Companies including Bank of America, Merrill, and, most recently as Vice President - Private Client Advisor, at J.P. Morgan before founding Nexus 360, LLC in 2024. Having qualified for the Series 7 and 66 licenses through FINRA, he also acquired the CRPC designation (Chartered Retirement Planning Counselor). He completed his postgraduate education with an MS in Financial Management at UMGC, and graduated cum laude with a BA in Psychology from UMBC. When he's not advising his clients, he conducts speaking engagements on financial literacy, develops real estate, volunteers at his home church, and spends time with his two kids, Zoey and Zayden. At Nexus 360, LLC, he educates his client with a (W+H)ealth Mindset Activation for financial freedom and goal achievement. He enjoys traveling, working out, history, and Sudoku Puzzles."
             : "For 15 years, Aaron James provided banking and advising services at Fortune 100 Companies including Bank of America, Merrill, and, most recently as Vice President - Private Client Advisor, at J.P. Morgan before founding Nexus 360, LLC in 2024."}
         </p>
-        <button
-          onClick={toggleFullText}
-          className="mt-4 text-blue-500 hover:text-blue-700 focus:outline-none"
-        >
-          {showFullText ? "Read Less" : "Read More"}
-        </button>
+        {/* Added space between short and long description */}
+        <div className="mt-4">
+          <button
+            onClick={toggleFullText}
+            className="text-blue-500 hover:text-blue-700 focus:outline-none"
+          >
+            {showFullText ? 'Read Less' : 'Read More'}
+          </button>
+        </div>
       </div>
 
       {/* Social Media Links */}
@@ -141,3 +144,4 @@ const App = () => {
 };
 
 export default App;
+
