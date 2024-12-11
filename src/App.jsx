@@ -26,12 +26,26 @@ const App = () => {
 
     // Send email to backend
     axios
-      .post('/api/send-email', { email })
+    e.preventDefault();  // Prevent default form submission behavior
+
+    // Email validation
+    if (!email || !/\S+@\S+\.\S+/.test(email)) {
+      alert('Please enter a valid email address.');
+      return;
+    }
+
+    console.log('Sending email:', email); // Log email to verify it is correct
+
+    // Send email to backend
+    axios
+      .post('api/send-email', { email })  // Adjust the endpoint as needed for your backend
       .then((response) => {
+        console.log('Email sent successfully:', response); // Log success response
         alert('Your email was sent successfully!');
         closeModal(); // Close modal after success
       })
       .catch((error) => {
+        console.error('Error sending email:', error); // Log error
         alert('Failed to send email. Please try again.');
       });
   };
