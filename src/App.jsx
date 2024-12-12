@@ -127,7 +127,7 @@ const App = () => {
           alt="Author"
           className="w-36 h-36 rounded-full mx-auto mb-4"
         />
-        <h2 className="text-2xl font-semibold">Author Name</h2>
+        <h2 className="text-2xl font-semibold">Aaron James</h2>
         <p className="author-description text-gray-700 mx-auto mt-2 max-w-xl">
           {showFullText
             ? "For 15 years, Aaron James provided banking and advising services at Fortune 100 Companies including Bank of America, Merrill, and, most recently as Vice President - Private Client Advisor, at J.P. Morgan before founding Nexus 360, LLC in 2024. Having qualified for the Series 7 and 66 licenses through FINRA, he also acquired the CRPC designation (Chartered Retirement Planning Counselor). He completed his postgraduate education with an MS in Financial Management at UMGC, and graduated cum laude with a BA in Psychology from UMBC. When he's not advising his clients, he conducts speaking engagements on financial literacy, develops real estate, volunteers at his home church, and spends time with his two kids, Zoey and Zayden. At Nexus 360, LLC, he educates his client with a (W+H)ealth Mindset Activation for financial freedom and goal achievement. He enjoys traveling, working out, history, and Sudoku Puzzles."
